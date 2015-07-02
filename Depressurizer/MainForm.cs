@@ -104,7 +104,7 @@ namespace Depressurizer {
 
             int initialSortCol = 1;
             displayedGamesSorter.SetSortMode( columnSortMap[initialSortCol], 1 );
-            lstGames.SetSortIcon( initialSortCol, ( displayedGamesSorter.SortDirection > 0 ) ? SortOrder.Ascending : SortOrder.Descending );
+            // lstGames.SetSortIcon( initialSortCol, ( displayedGamesSorter.SortDirection > 0 ) ? SortOrder.Ascending : SortOrder.Descending );
         }
 
         private void FormMain_Load( object sender, EventArgs e ) {

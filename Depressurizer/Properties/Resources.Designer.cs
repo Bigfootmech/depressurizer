@@ -61,7 +61,16 @@ namespace Depressurizer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0}\appcache\appinfo.vdf.
+        ///   Looks up a localized string similar to /Depressurizer/Default.profile.
+        /// </summary>
+        internal static string DefaultDepressurizerLocation {
+            get {
+                return ResourceManager.GetString("DefaultDepressurizerLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}/appcache/appinfo.vdf.
         /// </summary>
         internal static string AppInfoPath {
             get {
@@ -70,25 +79,7 @@ namespace Depressurizer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0}\userdata\{1}\7\remote\sharedconfig.vdf.
-        /// </summary>
-        internal static string ConfigFilePath {
-            get {
-                return ResourceManager.GetString("ConfigFilePath", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {0}\userdata\{1}\config\localconfig.vdf.
-        /// </summary>
-        internal static string LocalConfigPath {
-            get {
-                return ResourceManager.GetString("LocalConfigPath", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {0}\appcache\packageinfo.vdf.
+        ///   Looks up a localized string similar to {0}/appcache/packageinfo.vdf.
         /// </summary>
         internal static string PackageInfoPath {
             get {
@@ -97,7 +88,34 @@ namespace Depressurizer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0}\userdata\{1}\760\screenshots.vdf.
+        ///   Looks up a localized string similar to /Depressurizer/Default.profile.
+        /// </summary>
+        internal static string Userdata {
+            get {
+                return ResourceManager.GetString("Userdata", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}/userdata/{1}/7/remote/sharedconfig.vdf.
+        /// </summary>
+        internal static string ConfigFilePath {
+            get {
+                return ResourceManager.GetString("ConfigFilePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}/userdata/{1}/config/localconfig.vdf.
+        /// </summary>
+        internal static string LocalConfigPath {
+            get {
+                return ResourceManager.GetString("LocalConfigPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}/userdata/{1}/760/screenshots.vdf.
         /// </summary>
         internal static string ScreenshotsFilePath {
             get {
@@ -106,7 +124,7 @@ namespace Depressurizer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0}\userdata\{1}\config\shortcuts.vdf.
+        ///   Looks up a localized string similar to {0}/userdata/{1}/config/shortcuts.vdf.
         /// </summary>
         internal static string ShortCutsFilePath {
             get {

@@ -141,7 +141,7 @@ namespace Depressurizer {
             if( editMode ) {
                 InitializeEditMode();
             } else {
-                txtFilePath.Text = System.Environment.GetFolderPath( Environment.SpecialFolder.ApplicationData ) + @"\Depressurizer\Default.profile";
+                txtFilePath.Text = System.Environment.GetFolderPath( Environment.SpecialFolder.ApplicationData ) + @Properties.Resources.DefaultDepressurizerLocation;
 
                 if( lstUsers.Items.Count == 0 ) {
                     MessageBox.Show( GlobalStrings.DlgProfile_NoAccountConfiguration, GlobalStrings.Gen_Warning, MessageBoxButtons.OK, MessageBoxIcon.Exclamation );
@@ -366,7 +366,7 @@ namespace Depressurizer {
         /// <returns>An array of located IDs</returns>
         private string[] GetSteamIds() {
             try {
-                DirectoryInfo dir = new DirectoryInfo( Settings.Instance.SteamPath + "\\userdata" );
+                DirectoryInfo dir = new DirectoryInfo( string.Format( Properties.Resources.Userdata, Settings.Instance.SteamPath ));
                 if( dir.Exists ) {
                     DirectoryInfo[] userDirs = dir.GetDirectories();
                     string[] result = new string[userDirs.Length];
