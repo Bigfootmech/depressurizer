@@ -22,6 +22,9 @@ using Microsoft.Win32;
 
 namespace Depressurizer {
     public partial class DlgSteamPath : Form {
+
+        private IPlatformHelper PlatformHelper;
+
         public string Path {
             get {
                 return txtPath.Text.Trim().TrimEnd( new char[] { '\\' } );
@@ -30,7 +33,8 @@ namespace Depressurizer {
         
         public DlgSteamPath() {
             InitializeComponent();
-            txtPath.Text = GetSteamPath();
+            PlatformHelper = PlatformHelperFactory.GetInstance ();
+            txtPath.Text = PlatformHelper.GetSteamPath();
         }
 
         private void cmdOk_Click( object sender, EventArgs e ) {
@@ -48,16 +52,6 @@ namespace Depressurizer {
             DialogResult res = dlg.ShowDialog();
             if( res == System.Windows.Forms.DialogResult.OK ) {
                 txtPath.Text = dlg.SelectedPath;
-            }
-        }
-
-        private string GetSteamPath() {
-            try {
-                string s = Registry.GetValue( @"HKEY_CURRENT_USER\Software\Valve\Steam", "steamPath", null ) as string;
-                if( s == null ) s = string.Empty;
-                return s.Replace( '/', '\\' );
-            } catch {
-                return string.Empty;
             }
         }
     }
